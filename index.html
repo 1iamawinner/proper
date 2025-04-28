@@ -6,11 +6,32 @@
   <title>My Skills Tracker</title>
   
   <style>
+    /* Top line animation */
+    .top-line { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 3mm;
+      height: 100%;
+      background-color: black;
+      animation: slideDown 2s ease-in-out forwards;
+      z-index: 1000;
+    }
+
+    @keyframes slideDown {
+      0% {
+        height: 0;
+      }
+      100% {
+        height: 100%;
+      }
+    }
+
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #cccac8; /* Light grayish background */
+      background-color: #cccac8;
       color: #333;
     }
 
@@ -22,11 +43,13 @@
     }
 
     header {
-      background-color: #d1bba7; /* Light brownish block color */
+      background-color: #d1bba7;
       color: #333;
       padding-top: 30px;
       min-height: 70px;
       border-bottom: 3px solid #e8491d;
+      position: relative;
+      z-index: 1;
     }
 
     header a {
@@ -69,7 +92,7 @@
     .contact {
       padding: 40px 0;
       margin-bottom: 30px;
-      background-color: #d1bba7; /* Light brownish block */
+      background-color: #d1bba7;
       color: #333;
     }
 
@@ -213,7 +236,6 @@
       margin: 0;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       .container {
         width: 95%;
@@ -243,132 +265,128 @@
     }
 
     .fade-in {
-      opacity: 1; /* Always visible now */
+      opacity: 1;
     }
 
     .fade-in.active {
       opacity: 1;
     }
   </style>
-
 </head>
 
 <body>
-<header>
   <div class="top-line"></div>
-  <div class="container">
-    <h1>My Skills Tracker</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="wave-top-right">
-    <svg viewBox="0 0 100 20" preserveAspectRatio="none">
-      <path d="M0,20 C20,0 70,0 100,20 L100,0 L0,0 Z" fill="#d1bba7"></path>
-    </svg>
-  </div>
-</header>
 
-<section id="hero" class="hero fade-in">
-  <div class="container">
-    <div class="hero-content">
-      <h2>Welcome!</h2>
-      <p>A space to track and showcase my skills and experiences.</p>
+  <header>
+    <div class="container">
+      <h1>My Skills Tracker</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+    <div class="wave-top-right">
+      <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+        <path d="M0,20 C20,0 70,0 100,20 L100,0 L0,0 Z" fill="#d1bba7"></path>
+      </svg>
+    </div>
+  </header>
 
-<section id="about" class="about fade-in">
-  <div class="container">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <div class="about-image">
-        <img src="WhatsApp Image 2025-04-26 at 21.20.56.jpeg" alt="Shriya Working on a Project">
-      </div>
-      <div class="about-text">
-        <p>Hey, I am Shriya, an aspiring electronics engineer deeply fascinated by the intricacies of embedded systems...</p>
+  <section id="hero" class="hero fade-in">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Welcome!</h2>
+        <p>A space to track and showcase my skills and experiences.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills" class="skills fade-in">
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill-item">
-        <span class="icon">✨</span>
-        <span>Arduino programming</span>
-      </div>
-      <div class="skill-item">
-        <span class="icon">🎨</span>
-        <span>Building electronic DIY projects</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="projects fade-in">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project-item water-level-project">
-        <div class="project-info">
-          <h3>Water Level Monitoring System</h3>
-          <p class="description">Effortlessly monitor your water levels using ultrasonic sensors and Arduino Uno.</p>
+  <section id="about" class="about fade-in">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="WhatsApp Image 2025-04-26 at 21.20.56.jpeg" alt="Shriya Working on a Project">
         </div>
-        <div class="project-image">
-          <img src="Screenshot 2025-04-28 071335.png" alt="Water Level Monitoring System">
+        <div class="about-text">
+          <p>Hey, I am Shriya, an aspiring electronics engineer deeply fascinated by the intricacies of embedded systems...</p>
         </div>
       </div>
-
-      <div class="project-item">
-        <h3>Project Title 2</h3>
-        <p class="duration">Start Date - End Date</p>
-        <p class="description">Brief description of the project and your contributions.</p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact" class="contact fade-in">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <p>How people can get in touch with you.</p>
-  </div>
-</section>
+  <section id="skills" class="skills fade-in">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill-item">
+          <span class="icon">✨</span>
+          <span>Arduino programming</span>
+        </div>
+        <div class="skill-item">
+          <span class="icon">🎨</span>
+          <span>Building electronic DIY projects</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="wave-bottom-left">
-    <svg viewBox="0 0 100 20" preserveAspectRatio="none">
-      <path d="M0,20 C30,0 70,0 100,20 L0,20 Z" fill="#d1bba7"></path>
-    </svg>
-  </div>
-  <div class="container">
-    <p>&copy; 2025 My Skills Tracker</p>
-  </div>
-</footer>
+  <section id="projects" class="projects fade-in">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-item water-level-project">
+          <div class="project-info">
+            <h3>Water Level Monitoring System</h3>
+            <p class="description">Effortlessly monitor your water levels using ultrasonic sensors and Arduino Uno.</p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot 2025-04-28 071335.png" alt="Water Level Monitoring System">
+          </div>
+        </div>
+        <div class="project-item">
+          <h3>Project Title 2</h3>
+          <p class="duration">Start Date - End Date</p>
+          <p class="description">Brief description of the project and your contributions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-  // Fading (even if it's set to always 1 for now)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      } else {
-        entry.target.classList.remove('active');
-      }
+  <section id="contact" class="contact fade-in">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>How people can get in touch with you.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wave-bottom-left">
+      <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+        <path d="M0,20 C30,0 70,0 100,20 L0,20 Z" fill="#d1bba7"></path>
+      </svg>
+    </div>
+    <div class="container">
+      <p>&copy; 2025 My Skills Tracker</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
     });
-  });
-  const fadeElements = document.querySelectorAll('.fade-in');
-  fadeElements.forEach((el) => observer.observe(el));
-</script>
-
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
