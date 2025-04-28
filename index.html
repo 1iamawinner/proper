@@ -102,4 +102,273 @@
       flex: 1;
     }
 
-    .
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+      flex: 2;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .skills h2,
+    .projects h2,
+    .contact h2 {
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .skill-item .icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+      color: #e8491d;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .project-item {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-info h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .project-info .duration {
+      color: #777;
+      font-size: 0.9em;
+      margin-bottom: 5px;
+    }
+
+    .project-info .description {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .project-item.water-level-project {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .project-item.water-level-project .project-info {
+      flex: 2;
+      padding-right: 20px;
+    }
+
+    .project-item.water-level-project .project-image {
+      flex: 1;
+    }
+
+    .project-item.water-level-project .project-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .contact p {
+      text-align: center;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    footer {
+      background-color: #d1bba7;
+      color: #333;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 30px;
+    }
+
+    footer .container p {
+      margin: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+      header nav ul li {
+        padding: 0 10px;
+      }
+      header h1 {
+        font-size: 1.8em;
+      }
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-image {
+        margin-bottom: 20px;
+      }
+      .project-item.water-level-project {
+        flex-direction: column;
+      }
+      .project-item.water-level-project .project-info {
+        padding-right: 0;
+      }
+      .project-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .fade-in {
+      opacity: 1; /* Always visible now */
+    }
+
+    .fade-in.active {
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <h1>My Skills Tracker</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wave-top-right">
+    <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+      <path d="M0,20 C20,0 70,0 100,20 L100,0 L0,0 Z" fill="#d1bba7"></path>
+    </svg>
+  </div>
+</header>
+
+<section id="hero" class="hero fade-in">
+  <div class="container">
+    <div class="hero-content">
+      <h2>Welcome!</h2>
+      <p>A space to track and showcase my skills and experiences.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about fade-in">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="WhatsApp Image 2025-04-26 at 21.20.56.jpeg" alt="Shriya Working on a Project">
+      </div>
+      <div class="about-text">
+        <p>Hey, I am Shriya, an aspiring electronics engineer deeply fascinated by the intricacies of embedded systems...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills fade-in">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-item">
+        <span class="icon">✨</span>
+        <span>Arduino programming</span>
+      </div>
+      <div class="skill-item">
+        <span class="icon">🎨</span>
+        <span>Building electronic DIY projects</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects fade-in">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item water-level-project">
+        <div class="project-info">
+          <h3>Water Level Monitoring System</h3>
+          <p class="description">Effortlessly monitor your water levels using ultrasonic sensors and Arduino Uno.</p>
+        </div>
+        <div class="project-image">
+          <img src="Screenshot 2025-04-28 071335.png" alt="Water Level Monitoring System">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <h3>Project Title 2</h3>
+        <p class="duration">Start Date - End Date</p>
+        <p class="description">Brief description of the project and your contributions.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact fade-in">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>How people can get in touch with you.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wave-bottom-left">
+    <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+      <path d="M0,20 C30,0 70,0 100,20 L0,20 Z" fill="#d1bba7"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <p>&copy; 2025 My Skills Tracker</p>
+  </div>
+</footer>
+
+<script>
+  // Fading (even if it's set to always 1 for now)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  });
+  const fadeElements = document.querySelectorAll('.fade-in');
+  fadeElements.forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>
+
