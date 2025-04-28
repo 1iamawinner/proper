@@ -3,74 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R.Shriya - Portfolio</title>
+    <title>My Skills Tracker</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* style.css */
         body {
-            background-color: #cccac8;
-            font-family: 'Times New Roman', serif;
-            color: #333;
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #555; /* Light Tan (Background) */
+            color: #333;
         }
-        header {
-            background-color: #2c2a4a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+
+        .container,
+        header,
+        footer,
+        .skill-item,
+        .project-item,
+        .hero,
+        .contact,
+        .about {
+            background-color: #555; /* Medium Beige (Blocks) */
+            color: #333; /* Ensure text in these blocks is readable */
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+
+        header a,
+        header h1,
+        .contact h2,
+        .contact p,
+        footer p {
+            color: #333; /* Ensure text in header, contact, and footer is readable */
         }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
+
+        .wave-top-right path {
+            fill: #555; /* Match header background */
         }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
+
+        .wave-bottom-left path {
+            fill: #D9B99F; /* Match footer background */
         }
-        section {
-            padding: 20px;
-        }
-        footer {
-            background-color: #2c2a4a;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        .project-item {
-            background-color: #eee;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .contact-info {
-            text-align: center;
-            margin-top: 20px;
-        }
-        /* Waves SVG styling */
-        .wave-top-right {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 150px;
+
+        .about-image img {
+            max-width: 100%;
             height: auto;
+            border-radius: 8px;
         }
-        .wave-bottom-left {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 150px;
-            height: auto;
+
+        .about-text {
+            line-height: 1.6;
+            color: #333; /* Ensure text in about section is readable */
+        }
+
+        .skills h2,
+        .projects h2 {
+            color: #333;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-info h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .project-info .duration {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .project-info .description {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .project-item.water-level-project {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .project-item.water-level-project .project-info {
+            flex: 2;
+            padding-right: 20px;
+        }
+
+        .project-item.water-level-project .project-image {
+            flex: 1;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image {
+                margin-bottom: 20px;
+            }
+
+            .project-item.water-level-project {
+                flex-direction: column;
+            }
+
+            .project-item.water-level-project .project-info {
+                padding-right: 0;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in.active {
+            opacity: 1;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1 style="font-family: 'The Seasons';">R.Shriya</h1>
-        <p style="font-family: 'The Seasons';">Aspiring Electronics Engineer | Passionate About Learning & Growing | Exploring Arduino, Sensors & Embedded Systems</p>
+
+<header>
+    <div class="container">
+        <h1>My Skills Tracker</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -79,56 +151,109 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+    <div class="wave-top-right">
+        <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+            <path d="M0,20 C20,0 70,0 100,20 L100,0 L0,0 Z"></path>
+        </svg>
+    </div>
+</header>
 
-    <section id="about">
+<section id="hero" class="hero fade-in">
+    <div class="container">
+        <div class="hero-content">
+            <h2>Welcome!</h2>
+            <p>A space to track and showcase my skills and experiences.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about fade-in">
+    <div class="container">
         <h2>About Me</h2>
-        <img src="WhatsApp Image 2025-04-26 at 21.20.56.jpeg" alt="Shriya Working on a Project" style="width: 200px; border-radius: 50%;">
-        <p>Hello! I'm R.Shriya, an enthusiastic learner diving deep into the world of electronics, Arduino, and embedded systems. I enjoy creating innovative projects and constantly expanding my skills and knowledge.</p>
-    </section>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="WhatsApp Image 2025-04-26 at 21.20.56.jpeg" alt="Shriya Working on a Project">
+            </div>
+            <div class="about-text">
+                <p>Hey, I am Shriya, an aspiring electronics engineer deeply fascinated by the intricacies of embedded systems. My learning journey is heavily driven by hands-on projects, where I translate theoretical knowledge into tangible applications. Exploring the intersection of hardware and software is a constant source of excitement for me. This website showcases some of the embedded systems projects I've developed. Take a look and see what I've been building!</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="skills">
+<section id="skills" class="skills fade-in">
+    <div class="container">
         <h2>Skills</h2>
-        <ul>
-            <li>Arduino</li>
-            <li>Embedded Systems</li>
-            <li>Sensors Integration</li>
-            <li>C/C++ Programming</li>
-            <li>Problem-Solving</li>
-            <li>Prototyping & Innovation</li>
-        </ul>
-    </section>
+        <div class="skills-list">
+            <div class="skill-item">
+                <span class="icon">✨</span>
+                <span>Arduino programming</span>
+            </div>
+            <div class="skill-item">
+                <span class="icon">🎨</span>
+                <span>Building electronic DIY projects</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="projects">
+<section id="projects" class="projects fade-in">
+    <div class="container">
         <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-item water-level-project">
+                <div class="project-info">
+                    <h3>Water Level Monitoring System</h3>
+                    <p class="description">Effortlessly monitor your water levels with this engaging DIY project! Utilizing an ultrasonic sensor for precise distance measurement, an Arduino Uno intelligently interprets the data. LEDs provide instant visual feedback on the water level status. A built-in buzzer adds an extra layer of alerting for critical lows.</p>
+                </div>
+                <div class="project-image">
+                    <img src="Screenshot 2025-04-28 071335.png" alt="Water Level Monitoring System">
+                </div>
+            </div>
 
-        <div class="project-item">
-            <h3>Water Level Detection and Alert System</h3>
-            <p class="duration">March 2025 - April 2025</p>
-            <p class="description">Developed a prototype using Arduino Uno, Ultrasonic Sensor, and Buzzer to detect water levels and provide real-time alerts. The project emphasized efficient sensor integration and data processing for quick responses to changing water levels.</p>
-            <img src="WhatsApp Image 2025-04-26 at 21.20.56.jpeg" alt="Water Level Detection System" style="width: 100%; max-width: 400px; border-radius: 10px; margin-top: 10px;">
+            <div class="project-item">
+                <h3>Project Title 2</h3>
+                <p class="duration">Start Date - End Date</p>
+                <p class="description">Brief description of the project and your contributions.</p>
+            </div>
         </div>
+    </div>
+</section>
 
-        <div class="project-item">
-            <h3>Project Title 2</h3>
-            <p class="duration">Start Date - End Date</p>
-            <p class="description">Brief description of the project and your contributions.</p>
-            <img src="project2.jpg" alt="Project 2 Image" style="width: 100%; max-width: 400px; border-radius: 10px; margin-top: 10px;">
-        </div>
+<section id="contact" class="contact fade-in">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>How people can get in touch with you.</p>
+    </div>
+</section>
 
-    </section>
+<footer>
+    <div class="wave-bottom-left">
+        <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+            <path d="M0,20 C30,0 70,0 100,20 L0,20 Z"></path>
+        </svg>
+    </div>
+    <div class="container">
+        <p>&copy; 2025 My Skills Tracker</p>
+    </div>
+</footer>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: r.shriya@example.com</p>
-            <p>LinkedIn: linkedin.com/in/rshriya</p>
-            <p>GitHub: github.com/rshriya</p>
-        </div>
-    </section>
+<script>
+    // script.js
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    });
 
-    <footer>
-        <p>&copy; 2025 R.Shriya. All rights reserved.</p>
-    </footer>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach((el) => observer.observe(el));
+</script>
+
 </body>
 </html>
