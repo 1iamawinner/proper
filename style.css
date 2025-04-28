@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #555; /* Medium Beige (Background) */
+    background-color: #D9B99F; /* Medium Beige (Background) */
     color: #333;
 }
 
@@ -15,7 +15,7 @@ footer,
 .hero,
 .contact,
 .about {
-    background-color: #555; /* Medium Beige (Blocks) */
+    background-color: #D9B99F; /* Medium Beige (Blocks) */
     color: #333; /* Ensure text in these blocks is readable */
 }
 
@@ -28,7 +28,7 @@ footer p {
 }
 
 .wave-top-right path {
-    fill: #555; /* Match header background */
+    fill: #D9B99F; /* Match header background */
 }
 
 .wave-bottom-left path {
