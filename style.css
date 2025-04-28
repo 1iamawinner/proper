@@ -1,60 +1,82 @@
-//styles 
-
-
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #cccac8; /* Light grayish background */
-    color: #333;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #cccac8;
+  color: #333;
+}
+
+.top-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3mm;
+  height: 0;
+  background-color: black;
+  animation: slideDown 2s ease-in-out forwards;
+  z-index: 1000;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 header {
-    background-color: #d1bba7; /* Light brownish block color */
-    color: #333; /* Dark text for contrast */
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: 3px solid #e8491d; /* Keeping the accent color */
+  background-color: #d1bba7;
+  color: #333;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: 3px solid #e8491d;
 }
 
 header a {
-    color: #333; /* Dark text for contrast */
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
 header a:hover {
-    color: #e8491d;
-    font-weight: bold;
+  color: #e8491d;
+  font-weight: bold;
 }
 
 header h1 {
-    margin: 0;
-    float: left;
-    padding: 0 10px;
+  margin: 0;
+  float: left;
+  padding: 0 10px;
 }
 
 header nav {
-    float: right;
+  float: right;
 }
 
 header nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 header nav li {
-    display: inline;
-    padding: 0 20px;
+  display: inline;
+  padding: 0 20px;
+}
+
+.wave-top-right path,
+.wave-bottom-left path {
+  fill: #d1bba7;
 }
 
 .hero,
@@ -62,213 +84,155 @@ header nav li {
 .skills,
 .projects,
 .contact {
-    padding: 40px 0;
-    margin-bottom: 30px;
-    background-color: #d1bba7; /* Light brownish block color */
-    color: #333; /* Ensuring text is readable on the new background */
-}
-
-.hero .container,
-.about .container,
-.skills .container,
-.projects .container,
-.contact .container {
-    background: none;
+  padding: 40px 0;
+  margin-bottom: 30px;
+  background-color: #d1bba7;
 }
 
 .hero h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    color: #555;
+  font-size: 1.2em;
+  color: #555;
 }
 
 .about-content {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .about-image {
-    flex: 1;
+  flex: 1;
 }
 
 .about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
-    flex: 2;
-    line-height: 1.6;
-    color: #555;
+  flex: 2;
+  line-height: 1.6;
+  color: #555;
 }
 
 .skills h2,
 .projects h2,
 .contact h2 {
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .skill-item {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #f9f9f9; /* Keeping a lighter background for skill items */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .skill-item .icon {
-    margin-right: 10px;
-    font-size: 1.2em;
-    color: #e8491d; /* Keeping the accent color */
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #e8491d;
 }
 
 .project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
 }
 
 .project-item {
-    background-color: #f9f9f9; /* Keeping a lighter background for project items */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-info h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.project-info .duration {
-    color: #777;
-    font-size: 0.9em;
-    margin-bottom: 5px;
-}
-
-.project-info .description {
-    color: #555;
-    line-height: 1.5;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-item.water-level-project {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .project-item.water-level-project .project-info {
-    flex: 2;
-    padding-right: 20px;
+  flex: 2;
+  padding-right: 20px;
 }
 
 .project-item.water-level-project .project-image {
-    flex: 1;
+  flex: 1;
 }
 
 .project-item.water-level-project .project-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .contact p {
-    text-align: center;
-    font-size: 1.1em;
-    color: #555;
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
 }
 
 footer {
-    background-color: #d1bba7; /* Light brownish block color */
-    color: #333; /* Dark text for contrast */
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    margin-top: 30px;
+  background-color: #d1bba7;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
 }
 
-/*.wave-top-right,
-.wave-bottom-left {
-    position: absolute;
-    width: 100%;
-    fill: #cccac8; /* Matching the body background */
-    /*color: #d1bba7; /* Ensuring the path color contrasts with the fill */
-/*}*/
-
-/*.wave-top-right {
-    top: -20px;
-    left: 0;
-}*/
-
-/*.wave-bottom-left {
-    bottom: 60px;
-    left: 0;
-    transform: rotate(180deg);
-}*/
-
-footer .container p {
-    margin: 0;
+footer p {
+  margin: 0;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
+  .container {
+    width: 95%;
+  }
 
-    header nav ul li {
-        padding: 0 10px;
-    }
+  header nav ul li {
+    padding: 0 10px;
+  }
 
-    header h1 {
-        font-size: 1.8em;
-    }
+  header h1 {
+    font-size: 1.8em;
+  }
 
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .about-image {
-        margin-bottom: 20px;
-    }
+  .about-image {
+    margin-bottom: 20px;
+  }
 
-    .project-item.water-level-project {
-        flex-direction: column;
-    }
+  .project-item.water-level-project {
+    flex-direction: column;
+  }
 
-    .project-item.water-level-project .project-info {
-        padding-right: 0;
-    }
+  .project-item.water-level-project .project-info {
+    padding-right: 0;
+  }
 
-    .project-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-.fade-in {
-    opacity: 1; /* Set opacity to 1 by default, effectively removing the fade-in */
-    /* transition: opacity 0.5s ease-in-out; */ /* Remove the transition */
-}
-
-.fade-in.active {
-    opacity: 1; /* Keep it at 1 */
+  .project-list {
+    grid-template-columns: 1fr;
+  }
 }
