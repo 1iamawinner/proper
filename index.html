@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Skills Tracker</title>
+    <title>SkillForge</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* style.css */
@@ -11,7 +11,7 @@
             font-family: sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #555; /* Light Tan (Background) */
+            background-color: #edb3a6; /* Light Tan (Background) */
             color: #333;
         }
 
@@ -23,7 +23,7 @@
         .hero,
         .contact,
         .about {
-            background-color: #555; /* Medium Beige (Blocks) */
+            background-color: #e8bebe; /* Medium Beige (Blocks) */
             color: #333; /* Ensure text in these blocks is readable */
         }
 
@@ -35,13 +35,7 @@
             color: #333; /* Ensure text in header, contact, and footer is readable */
         }
 
-        .wave-top-right path {
-            fill: #555; /* Match header background */
-        }
-
-        .wave-bottom-left path {
-            fill: #D9B99F; /* Match footer background */
-        }
+       
 
         .about-image img {
             max-width: 100%;
@@ -62,7 +56,8 @@
         .skill-item {
             display: flex;
             align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px #e8bebe;
+
         }
 
         .skill-item .icon {
@@ -142,22 +137,25 @@
 
 <header>
     <div class="container">
-        <h1>My Skills Tracker</h1>
+        <h1>SkillForge</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
-    <div class="wave-top-right">
-        <svg viewBox="0 0 100 20" preserveAspectRatio="none">
-            <path d="M0,20 C20,0 70,0 100,20 L100,0 L0,0 Z"></path>
-        </svg>
-    </div>
 </header>
+
+<div class="wave-top-right">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path d="M0,0 C600,100 900,0 1440,100 L1440,0 L0,0 Z" fill="#000000"></path>
+  </svg>
+</div>
+    
 
 <section id="hero" class="hero fade-in">
     <div class="container">
@@ -173,7 +171,7 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-image">
-                <img src="WhatsApp Image 2025-04-26 at 21.20.56.jpeg" alt="Shriya Working on a Project">
+                <img src="Grey And Beige Photo Collage Instagram Story (1).png" alt="R.Shriya">
             </div>
             <div class="about-text">
                 <p>Hey, I am Shriya, an aspiring electronics engineer deeply fascinated by the intricacies of embedded systems. My learning journey is heavily driven by hands-on projects, where I translate theoretical knowledge into tangible applications. Exploring the intersection of hardware and software is a constant source of excitement for me. This website showcases some of the embedded systems projects I've developed. Take a look and see what I've been building!</p>
@@ -221,10 +219,19 @@
     </div>
 </section>
 
+<section id="certificates" class="certificates fade-in">
+    <div class="container">
+        <h2>Certificates</h2>
+        <div class="certificate-image">
+            <img src="WhatsApp Image 2025-04-29 at 16.39.36.jpeg" alt="Certificate" style="max-width: 75%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px #874646;">
+        </div>
+    </div>
+</section>
+
 <section id="contact" class="contact fade-in">
     <div class="container">
         <h2>Contact Me</h2>
-        <p>How people can get in touch with you.</p>
+        <p>Email me at raghavendrashriya37@gmail.com</p>
     </div>
 </section>
 
