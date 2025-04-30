@@ -189,9 +189,10 @@ header nav li {
 }
 
 .project-item.water-level-project .project-image img {
-    max-width: 100%;
+    width: 180px;
     height: auto;
-    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
 }
 
 .contact p {
